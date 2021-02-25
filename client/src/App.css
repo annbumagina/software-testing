@@ -1,0 +1,95 @@
+html, body, div {
+  height: 100%;
+  overflow: hidden;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: aquamarine;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.Color {
+  height: 100%;
+  margin: 0;
+}
+
+.color {
+  margin: 0;
+  padding: 20px;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+img {
+  position: fixed;
+  width: 20%;
+  top: 40%;
+  left: 40%;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+form {
+  margin-bottom: 50px;
+}
+
+.form {
+  position: fixed;
+  width: 60%;
+  top: 30%;
+  left: 20%;
+}
+
+.colorButton {
+  position: fixed;
+  width: 20%;
+  top: 30%;
+  left: 40%;
+}
+
+.error {
+  color: red;
+}
+
+.formText {
+  font-size: 30px;
+  font-weight: bold;
+  color: cadetblue;
+}
+
+.submitButton {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: cadetblue;
+}
