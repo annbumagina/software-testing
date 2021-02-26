@@ -31,12 +31,12 @@ jobs:
         working-directory: ./client
         run: |
               npm install
-              npm start
+              npm start &
       - name: Start server
         working-directory: ./api
         run: |
               npm install
-              npm start
+              npm start &
       - name: Run tests
         working-directory: ./client
         run: |
