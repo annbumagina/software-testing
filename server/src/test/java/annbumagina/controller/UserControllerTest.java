@@ -61,4 +61,22 @@ public class UserControllerTest {
         this.mockMvc.perform(get("/register?login=mike&pass=123")).andExpect(status().isOk())
                 .andExpect(content().string(containsString("Login already exists")));
     }
+
+    @Test
+    public void getEmptyUser() throws Exception {
+        this.mockMvc.perform(get("/get")).andExpect(status().isOk())
+                .andExpect(content().string(containsString("")));
+    }
+
+    @Test
+    public void getUser() throws Exception {
+        User user = new User("mari", "123");
+        when(userDao.checkUser(user)).thenReturn(true);
+
+        this.mockMvc.perform(get("/login?login=mari&pass=123")).andExpect(status().isOk())
+                .andExpect(content().string(containsString("OK")));
+
+        this.mockMvc.perform(get("/get")).andExpect(status().isOk())
+                .andExpect(content().string(containsString("mari")));
+    }
 }

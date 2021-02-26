@@ -35,4 +35,13 @@ public class UserController {
         }
         return "Login already exists";
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/get")
+    public String get() {
+        if (user != null) {
+            return user.getLogin();
+        }
+        return null;
+    }
 }

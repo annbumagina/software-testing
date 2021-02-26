@@ -38,4 +38,12 @@ public class UserDaoTest {
         assertTrue(userDao.addUser(user));
         assertTrue(userDao.checkUser(user));
     }
+
+    @Test
+    void testAddExistedUser() {
+        User user = new User("mike", "321");
+        assertTrue(userDao.addUser(user));
+        assertTrue(userDao.checkUser(user));
+        assertFalse(userDao.addUser(user));
+    }
 }
