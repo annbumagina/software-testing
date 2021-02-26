@@ -40,5 +40,5 @@ jobs:
       - name: Run tests
         working-directory: ./client
         run: |
-              npm test-playwright
-              npm test-cypress
+              npm run test-playwright
+              npm run test-cypress
