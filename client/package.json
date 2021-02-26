@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest",
+    "test": "jest -- /test/component.test /test/unit.test",
     "test-playwright": "jest -- /test/e2e-playwright.test",
     "test-cypress": "cypress run",
     "eject": "react-scripts eject"
